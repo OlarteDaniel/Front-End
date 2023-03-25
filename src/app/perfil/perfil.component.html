@@ -1,0 +1,31 @@
+<body>
+    <div *ngFor="let persona of personas" class="perfil">  
+        <img class="foto" src={{persona.url}} alt="">
+        <div class="astronauta">
+            <img class="astro" src="../assets/imagenes/Perfil3.0.png" alt="">
+            <div class="nombre">
+                {{persona.nombre}} {{persona.apellido}}
+            </div> 
+            <div class="descripcion">
+                {{persona.sobreMi}}
+            </div>
+            <div class="titulo">
+                {{persona.titulo}}
+            </div>
+            <div class="rocas">
+                <img src="../assets/imagenes/Roca12.0.png" alt="" class="r1">
+                <img src="../assets/imagenes/Roca22.0.png" alt="" class="r2">
+                <img src="../assets/imagenes/Roca3.0.png" alt="" class="r3">
+                <img src="../assets/imagenes/Roca12.0.png" alt="" class="r4">
+                <img src="../assets/imagenes/Roca42.0.png" alt="" class="r5">
+                <img src="../assets/imagenes/Roca3.0.png" alt="" class="r6">
+                <img src="../assets/imagenes/Roca52.0.png" alt="" class="r7">
+            </div>
+            <a *ngIf="visualizarMenu()" (click)="Editar(persona)" class="btn-perfil">
+                <img src="../assets/imagenes/pincel.png" alt="" class="pincel">
+            </a>
+        </div>
+    </div>
+    
+    
+</body>

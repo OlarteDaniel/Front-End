@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <header>
+            <a href="#" class="logo">
+                <img src="../assets/imagenes/arg-programa.png" 
+                alt="Argentina Programa">
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="/sobreMi">Sobre mi</a></li>
+                    <li><a class="Contacto">Contacto</a>
+                        <ul class="submenu">
+                            <li><a href="https://www.facebook.com/profile.php?id=100006371740916"class="fa-brands fa-facebook">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/lamas__daniel/" class="fa-brands fa-instagram">Instagram</a></li>
+                            <li><a href="https://twitter.com/ElPalpa1" class="fa-brands fa-twitter">Twitter</a></li>
+                        </ul>
+                    </li>
+                    <a *ngIf="visualizarMenu() == false" href="/login" class="btn"><button>Login</button></a>
+                    <a *ngIf="visualizarMenu() == true" href="/" class="btn"><button (click)="Logout()">Logut</button></a>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>

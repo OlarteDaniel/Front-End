@@ -1,0 +1,30 @@
+<img src="../assets/imagenes/fondo_perfil.png" alt="" class="fondo">
+<div class="contenedor">
+    <div *ngFor="let persona of personas" class="marco">
+        <div class="v-line">
+        </div>
+        <hr>
+        <img class="foto" src={{persona.url}} alt="">
+        <a *ngIf="visualizarMenu()" (click)="Editar(persona)" class="btn-perfil">
+            <img src="../assets/imagenes/pincel.png" alt="" class="pincel">
+        </a>
+        <h2 class="nombre">{{persona.nombre}} {{persona.apellido}}</h2>
+        <h3 class="titulo">{{persona.titulo}}</h3>
+        <p class="telefono"><i class="fa-solid fa-phone" style="margin-top: 1%; margin-right: 2%;"></i><span style="color: white;">{{persona.numero}}</span></p>
+        <div class="correo">
+            <i class="fa-solid fa-envelope" style="margin-top: 1%; margin-right: 2%;"></i><span style="color: white;">{{persona.correo}}</span>
+        </div>
+        <p class="cumple"><i class="fa-solid fa-cake-candles" style="margin-top: 1%; margin-right: 2%;"></i><span style="color: white;">{{persona.fnac}}</span></p>
+        <p class="localidad"><i class="fa-sharp fa-solid fa-location-dot"style="margin-top: 1%; margin-right: 2%;"></i><span style="color: white;">{{persona.localidad}}</span></p>
+        <div class="descripcion">
+            {{persona.sobreMi}}
+        </div>
+        <div class="redes">
+            <a href="https://github.com/OlarteDaniel" class="git"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/lamas__daniel/" class="insta"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100006371740916" class="face"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/ElPalpa1" class="twit"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        
+    </div>
+</div>

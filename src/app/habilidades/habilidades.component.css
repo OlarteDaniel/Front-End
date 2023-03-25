@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor{
+    margin-top: 30%;
+    width: 100%;
+    height: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d1152;
+    clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%);
+}
+
+.titulo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #ffbc0e;
+    font-size: 4vw;
+    font-family: 'Concert One', cursive;
+}
+
+.graficas-contenedor{
+    position: relative;
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5%;
+    width: 80%;
+    height: 60%;
+    margin-top: 2%;
+    background-color: #dde3e7;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    /*background-color: #e3edf7;*/
+}
+
+.exterior, .exterior1, .exterior2, .exterior3, .exterior4, .exterior5, .exterior6, .exterior7{
+    position: absolute;
+    overflow: hidden;
+    margin-left: 4%;
+    margin-top: 4%;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+}
+
+.exterior1{
+    margin-left: 28%;
+}
+
+.exterior2{
+    margin-left: 52%;
+}
+
+.exterior3{
+    margin-left: 76%;
+}
+
+.exterior4{
+    margin-top: 27%;
+}
+
+.exterior5{
+    margin-top: 27%;
+    margin-left: 28%;
+}
+
+.exterior6{
+    margin-top: 27%;
+    margin-left: 52%;
+}
+
+.exterior7{
+    margin-top: 27%;
+    margin-left: 76%;
+}
+
+.interior, .interior1, .interior2, .interior3, .interior4, .interior5, .interior6, .interior7{
+    overflow: hidden;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+
+.logotipo{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.logo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    cursor: pointer;
+}
+
+#numero, #numero1, #numero2, #numero3, #numero4, #numero5, #numero6, #numero7{
+    margin-bottom: 18vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 4vw;
+    color: rgb(255, 169, 10);
+    font-weight: bolder;
+}
+
+.abajo{
+    animation: abajo .4s linear forwards;
+}
+
+@keyframes abajo {
+    to{transform: translateY(9vw);}
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15vw;
+    height: 15vw;
+}
+
+circle{
+    fill: none;
+    stroke: #1a2096;
+    stroke-width: 20% ;
+    stroke-dasharray: 40vw;
+    stroke-dashoffset:40vw;
+    z-index: 15;
+}
+
+circle.fondo{
+    fill: none;
+    stroke: #ffbc0e;
+    stroke-width: 20%;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    z-index: 10;
+}
+
+.circulo.play{
+    animation: anim 3s linear forwards;
+}
+
+@keyframes anim {
+    100%{
+        stroke-dashoffset: 10vw;
+    }
+}
+
+.circulo1.play{
+    animation: anim1 3s linear forwards;
+}
+
+@keyframes anim1 {
+    100%{
+        stroke-dashoffset: 16vw;
+    }
+    
+}
+
+.circulo2.play{
+    animation: anim2 3s linear forwards;
+}
+
+@keyframes anim2 {
+    100%{
+        stroke-dashoffset: 23vw;
+    }
+    
+}
+
+.circulo3.play{
+    animation: anim3 3s linear forwards;
+}
+
+@keyframes anim3 {
+    100%{
+        stroke-dashoffset: 23vw;
+    }
+    
+}
+
+.circulo4.play{
+    animation: anim4 3s linear forwards;
+}
+
+@keyframes anim4 {
+    100%{
+        stroke-dashoffset: 29vw;
+    }
+    
+}
+
+.circulo5.play{
+    animation: anim5 3s linear forwards;
+}
+
+@keyframes anim5 {
+    100%{
+        stroke-dashoffset: 20vw;
+    }
+    
+}
+
+.circulo6.play{
+    animation: anim6 3s linear forwards;
+}
+
+@keyframes anim6 {
+    100%{
+        stroke-dashoffset: 26vw;
+    }
+    
+}
+
+.circulo7.play{
+    animation: anim7 3s linear forwards;
+}
+
+@keyframes anim7 {
+    100%{
+        stroke-dashoffset: 29vw;
+    }
+    
+}

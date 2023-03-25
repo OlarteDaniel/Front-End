@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Concert One', cursive;
+}
+
+.contenedor{
+    position: relative;
+    margin-top: 40%;
+    width: 100%;
+    height: 55vw;
+}
+
+.contenedor .flotante{
+    position: absolute;
+    width: 60%;
+    bottom: 110%;
+    left: -50%;
+    animation: flotar 5s infinite linear;
+    transition: 2s;
+    opacity: 0;
+}
+
+.contenedor .derecha{
+    transition: 2s;
+    opacity: 100%;
+    left: 19%;
+}
+
+.contenedor .Cartel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    transition: 1s;
+    top: 10%;
+    opacity: 0;
+}
+
+.contenedor .conte{
+    animation: apagado 0.5s forwards;
+}
+
+@keyframes apagado {
+    0%{opacity: 100%;}
+    40%{opacity: 0%;}
+    100%{opacity: 0%;}
+}
+
+.contenedor .arriba{
+    transition: 1s;
+    transform: translateY(-10%);
+    opacity: 100%;
+}
+
+.contenedor .encendido{
+    animation: encendido 1.4s forwards;
+}
+
+@keyframes encendido {
+    0%{opacity: 0%;}
+    60%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+
+@keyframes flotar {
+    50%{transform: translateY(15%);}
+}
+
+
+
+.contenedor .luz{
+    position: absolute;
+    width: 4.9%;
+    height: 2.5%;
+    left: 46.1%;
+    top: 43.3%;
+    background-color:white;;
+    box-shadow: inset 0 0 5px #ffbc0e, 0 0 15px #ffbc0e, 0 0 30px #ffbc0e, 0 0 40px #ffbc0e;
+    animation: parpadeo 2.5s infinite backwards;
+}
+
+@keyframes parpadeo {
+    50%{
+        color: gray;
+        box-shadow: none;
+    }
+    
+    
+}
+
+
+                    /*Boton Arriba*/
+.contenedor .bloc1{
+    position: absolute;
+    width: 3.5%;
+    height: 7.8%;
+    left: 74.4%;
+    top: 17.9%;
+    background-color: rgb(0, 14, 53);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.contenedor .bloc1:hover{
+    background-color: white;
+    box-shadow: inset 0 0 5px #ffbc0e, 0 0 15px #ffbc0e, 0 0 30px #ffbc0e, 0 0 40px #ffbc0e;
+}
+
+.contenedor .bloc1 .prev{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: 15%;
+}
+
+                    /*Boton Arriba*/
+
+
+                    /*Boton Abajo*/
+.contenedor .bloc2{
+    position: absolute;
+    width: 3.5%;
+    height: 7.7%;
+    top: 27%;
+    left: 74.4%;
+    background-color:  rgb(0, 14, 53);
+    transition: 1s;
+    cursor: pointer;
+
+}
+
+.contenedor .bloc2:hover{
+    background-color: white;
+    box-shadow: inset 0 0 5px #ffbc0e, 0 0 15px #ffbc0e, 0 0 30px #ffbc0e, 0 0 40px #ffbc0e;
+}
+
+.contenedor .bloc2 .next{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: 15%;
+}
+
+                    /*Boton Abajo*/
+
+
+                    /*Seccion Experiencia*/
+
+.contenedor .slider{
+    position: absolute;
+    width: 42.3%;
+    height: 34.5%;
+    left: 27.3%;
+    top: 6.6%;
+    display: block;
+    overflow-y: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.contenedor .slider .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+.contenedor .slider .img img{
+    width: 100%;
+    height: 100%;
+}
+
+                    /*Xp General*/
+.contenedor .slider .img .logotipo{
+    top: 0%;
+    position: absolute;
+    /*background-color: blue;*/
+    width: 30%;
+    height: 60%;
+    margin: 1%;
+    
+}
+
+.contenedor .slider .img .logotipo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.contenedor .slider .img .puesto{
+    top:63%;
+    position: absolute;
+    /*background-color: green;*/
+    width: 30%;
+    height: 15%;
+    margin: 1%;
+    font-size: 1.2vw;
+    color: #ffbc0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .slider .img .periodo{
+    bottom:3%;
+    position: absolute;
+    /*background-color: yellow;*/
+    width: 30%;
+    height: 15%;
+    margin: 1%;
+    font-size: 1.2vw;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .slider .img .titulo{
+    top: 0%;
+    right: 0%;
+    position: absolute;
+    /*background-color: violet;*/
+    width: 67%;
+    height: 15%;
+    margin: 1%;
+    font-size: 1.5vw;
+    color: #ffbc0e;
+    background: rgba(0, 0, 0,.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .slider .img .descripcion{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    top: 17%;
+    right: 0%;
+    position: absolute;
+    /*background-color: aqua;*/
+    width: 67%;
+    height: 61%;
+    margin: 1%;
+    font-size: 1.2vw;
+    color: #fff;
+    display: flex;
+    border-bottom: solid 1px #ffbc0e;
+}
+
+.contenedor .slider .img .informacion{
+    bottom: 0%;
+    right: 0%;
+    position: absolute;
+    /*background-color: tomato;*/
+    width: 30%;
+    height: 15%;
+    margin: 1%;
+    font-size: 1.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .slider .img .informacion a{
+    color: #ffbc0e;
+}
+
+.btn-perfil1{
+    transition: .3s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 4vw;
+    border: .4vw solid black;
+    background-color: #ffbc0e;
+    border-radius: 50%;
+    right: 45%;
+    bottom: 1%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn-perfil2{
+    transition: .3s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 4vw;
+    border: .4vw solid black;
+    background-color: #ff0e0e;
+    border-radius: 50%;
+    left: 58%;
+    bottom: 1%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn-perfil3{
+    transition: .3s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 4vw;
+    border: .4vw solid black;
+    background-color: #05ac1b;
+    border-radius: 50%;
+    right: 58%;
+    bottom: 1%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn-perfil1 .pincel{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+}
+
+.btn-perfil2 .tacho{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+}
+
+.btn-perfil2 .mas{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+}
+
+.btn-perfil1:hover{ 
+    transform: scale(1.2);
+}
+
+.btn-perfil2:hover{ 
+    transform: scale(1.2);
+}
+
+.btn-perfil3:hover{ 
+    transform: scale(1.2);
+}
+
+                    /*Xp General*/
+
+
+                    /*Seccion Experiencia*/

@@ -1,0 +1,162 @@
+/*Importamos la fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    margin: 0; /*Relleno externo*/
+    padding: 0; /*Relleno interno*/
+    z-index:10;
+}
+
+header{
+    position: fixed; /*Establecemo el header para que se mueva junto con la pantalla*/
+    top: 0;
+    left: 0;
+    width: 100%; /*Que ocupe el 100% de la pantalla*/
+    display: flex; /**/
+    justify-content: space-around; /*Definimos que nuestros elementos se distribuyan en las posiciones de izquierda  y derecha pero dejando un espacio considerable para no colocarse al limite de dichas posiciones*/
+    transition: 0.7s;
+    padding: 30px 20px; /*Relleno interno*/
+    
+    /*z-index: 10; Posicionamos nuestro elemento arriba de todo siendo mas especifico en la posicion 10 del eje Z*/
+}
+
+.hamburguer{
+    display: none;
+}
+
+body{
+    font-family: 'Nunito', sans-serif; /* fuente*/
+    font-size: 20px; /*tamaño de la letra*/
+}
+
+header.abajo{ /*Dicha clase solo aparecera cuando se haga Scroll*/
+    background: #111269; /*Obtendra un borde azul*/
+    padding: 15px 20px; /*arriba a abajo  izquierda a derecha*/
+}
+
+header .logo{
+    cursor: pointer; /*Al posicionar el cursor en el elemento el mismo se convertira en una mano*/
+    margin-right: auto; /*Auto significa el valor por defecto del elemento*/
+}
+
+header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+header .logo img:hover{
+    transform: scale(1.2); /*Al poscionar el curso en la imagen la misma cambiara su escala a 1.2*/
+}
+
+nav{
+    display: flex;
+    justify-content: center; /*Nuestro elemento de la seccion nav se centraran en el medio obteniendo una separacion de iguales proporciones*/
+    align-items: center; /*Nuestro elemento se centraran pero esta vez teniendo como referencia el eje Y*/
+}
+
+header ul{
+    position: relative; /*La posicion relative se refiere a su posicion natural pero perimitiendonos modificar su posicion tomando como referencia su posicion natural*/
+    display: flex;
+    align-items: center; /*Nuestro elemento se centraran pero esta vez teniendo como referencia el eje Y*/
+}
+
+
+header ul li{
+    list-style: none; 
+}
+
+header ul li a{
+    position: relative;
+    margin: 0 15px; /*Relleno externo*/
+    text-decoration: none;
+    color: #e2f1f8;
+    letter-spacing: 2px; /*Espacio entre las letras*/
+    font-weight: 600;
+    transition: 0.7s;
+}
+
+.Contacto{
+    cursor: pointer;  
+}
+
+header .menu li:hover{
+    transform: scale(1.1);  /* Al pasar el raton sobre los li, estos aumentan su escala en 1.1 de tamaño */
+    transition: all .3s;
+}
+
+header .menu li a:hover{
+    color: #ffbc0e;
+    transition: all .3s;
+}
+
+header .submenu li a:hover {
+    color: #ffbc0e;
+    transition: all .3s;
+}
+
+header .submenu {
+    position: absolute; /*Se posicionara en el elemento relative mas cercano*/
+    display: block; /*Los elementos se mostraran uno encima de otro*/
+    visibility: hidden; /*Nuestro elemento se oculta pero su posicion sigue siendo ocupada*/
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+header .submenu li a {
+    display: block; /*Los elementos se mostraran uno encima de otro*/
+    padding: 15px 0 10px 0; /*Relleno interno*/
+    color:#e2f1f8;
+    font-size: .8em;
+    text-decoration: none;
+    text-align: center;
+}
+
+header .menu li:hover .submenu {
+    visibility: visible; /*Nuestro elemento se muestra*/
+    opacity: 1;
+
+}
+
+header .btn button{
+    font-family: 'Nunito', sans-serif; /* fuente*/
+    font-size: 20px; /*tamaño de la letra*/
+    position: relative;
+    margin: 0 70px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #e2f1f8;
+    padding: 9px 25px;
+    background: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;    /* El raton se transforma en una mano al pasar por la img */
+    transition: all 0.3s ease 0s;
+    
+}
+
+header .btn button:hover{
+    background-color: none;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+
+header.abajo .logo,
+header.abajo ul li a{
+    color: #eceff1;
+}
+
+header.abajo .btn button{
+    color: #111269;
+    background: #eceff1;
+}
+
+header.abajo .btn button:hover{
+    color: #ffbc0e;
+}
+
+header.abajo .submenu{
+    background: #111269;
+    border-radius: 1em;
+    transition: 1s;
+}

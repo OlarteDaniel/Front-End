@@ -1,0 +1,54 @@
+<img src="../assets/imagenes/fon_form.png" alt="" class="fondo">
+<form [formGroup]="myForm" (ngSubmit)="submitFormulario()">
+    <div *ngIf="educacionForm != null" class="contenedor">
+        <div class="perfil">
+            <h2>Editar Educacion</h2>
+            <div class="inputBox" id="nombreInstitucion">
+                <span class="title">Nombre de Institucion</span>
+                <input [(ngModel)]="educacionForm.nombreInstitucion"  type="text" formControlName="nombreInstitucion"  [class.is-invalid]="f.nombreInstitucion.errors && f.nombreInstitucion.touched" placeholder="Nombre de la Institucion">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Nombre de la intitucion Obligatorio!
+                </div>
+            </div>
+            <div class="inputBox" id="titulo">
+                <span class="title">Titulo Obtenido</span>
+                <input [(ngModel)]="educacionForm.titulo"  type="text" formControlName="titulo"  [class.is-invalid]="f.titulo.errors && f.titulo.touched" placeholder="Titulo Obtenido">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Titulo Obligatorio!
+                </div>
+            </div>
+            <div class="inputBox" id="finic"> 
+                <span class="title">Fecha de iniciación </span>
+                <input [(ngModel)]="educacionForm.fechaInicio" type="date" formControlName="finic" [class.is-invalid]="f.finic.errors && f.finic.touched" placeholder="Fecha de Inicio">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Fecha Obligatoria!
+                </div>
+            </div>  
+            <div class="inputBox" id="ffin"> 
+                <span class="title">Fecha de Finalizacion</span>
+                <input [(ngModel)]="educacionForm.fechaFin" type="date" formControlName="ffin" [class.is-invalid]="f.ffin.errors && f.ffin.touched" placeholder="Fecha de Finalizacion">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Fecha Obligatoria!
+                </div>
+            </div>
+            <div class="inputBox" id="url">
+                <span class="title">Url de Imagen</span>
+                <input [(ngModel)]="educacionForm.url"  type="text" formControlName="url"  [class.is-invalid]="f.url.errors && f.url.touched" placeholder="Url del logotipo">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Url obligatoria
+                </div>
+            </div>
+            <div class="textBox" id="descripcion">
+                <span class="title">Descripcion</span>
+                <textarea [(ngModel)]="educacionForm.descripcion"  formControlName="descripcion" [class.is-invalid]="f.descripcion.errors && f.descripcion.touched" placeholder="Descripcion"></textarea>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Descripcion Obligatoria!
+                </div>
+            </div>
+            <div class="inputBox b" id="btn">
+                <input (click)="Actualizar(educacionmod)" type="submit" value="Enviar">
+            </div>
+            
+        </div>
+    </div>
+</form>

@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-family: 'Concert One', cursive;
+    
+}
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    height: 55vw;
+    margin-top: 20%;
+}
+
+.contenedor .fondo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.contenedor .fondo .mesa{
+    margin: 0;
+    padding: 0;
+    top: 26.2%;
+    position: absolute;
+    overflow-y: hidden;
+    width: 100%;
+    transition: 1s;
+    opacity: hidden;
+}
+
+.contenedor .fondo .carpeta{
+    position: absolute;
+    width: 25%;
+    bottom: 25%;
+    left: 0%;
+    transition: 1s;
+    opacity: 0%;
+}
+
+.contenedor .fondo .lupa{
+    position: absolute;
+    width: 15%;
+    right: 5%;
+    top: 5%;
+    transition: 1s;
+    opacity: 0%;
+}
+
+.contenedor .fondo .porta{
+    position: absolute;
+    width: 30%;
+    top: 5%;
+    left: 5%;
+    transition: 1s;
+    opacity: 0%;
+}
+
+
+
+@keyframes desvanecer {
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+
+
+
+.container, .book-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.book-content{
+	width: 35%;
+    left: 45%;
+    bottom: 65%;
+	height: 45%;
+	position: relative;
+	perspective: 1000px;
+	transition: 1s;
+    opacity: 0%;
+    transform: scale(1.4);
+    
+    
+}
+.book{
+	position: absolute;
+	width: 65%;
+	height: 100%;
+	transition: 1s;
+	transform-style: preserve-3d;
+	transform-origin: left; 
+}
+.face-front, .face-back{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(46, 38, 66);
+    border-radius: .3cm;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.face-front{
+	box-shadow: inset 3px 0px 20px -7px black;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+    padding-right: 3%;
+}
+.face-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateZ(-1px) rotateY(180deg);
+	box-shadow: inset -3px 1px 20px -7px black;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+    padding-left: 3%;
+}
+
+.logo{
+    position: absolute;
+    left: 0%;
+    top: -.9%;
+    margin: 5%;
+    width: 9vw;
+    height: 9vw;
+}
+
+.marco{
+    position: absolute;
+    left: 0%;
+    margin: 5%;
+    width: 9.8vw;
+    height: 10.8vw;
+    border-width: .9vw .9vw 1.8vw .9vw;
+    border-style: solid;
+    border-color: rgb(89, 78, 133);
+}
+
+.nombre{
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    top: 0%;
+    right: 0%;
+    margin: 5%;
+    width: 10vw;
+    height: 4vw;
+    color: #ffbc0e;
+
+}
+
+.titulo{
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    top: 12.5%;
+    right: 0%;
+    margin: 5%;
+    width: 10vw;
+    height: 4.8vw;
+    color: #fff;
+}
+
+.periodo{
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    top: 30.5%;
+    right: 0%;
+    margin: 5%;
+    width: 10vw;
+    height: 3vw;
+    color: #fff;
+    
+}
+
+.descripcion{
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    font-size: 1vw;
+    bottom: 9%;
+    left: 0%;
+    margin: 5%;
+    width: 19vw;
+    height: 9vw;
+    color: #fff;
+    border-top: solid 1px #ffbc0e;
+}
+
+.btn-perfil{
+    transition: .3s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: 3vw;
+    border: .3vw solid black;
+    background-color: #ffbc0e;
+    border-radius: 50%;
+    right: 43%;
+    bottom: 1%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn-perfil .pincel{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+}
+
+.btn-perfil:hover{
+    
+    transform: scale(1.2);
+}
+
+.back{
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    width: 4vw;
+    height: 3vw;
+    cursor: pointer;
+}
+
+.back:hover{
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+.next{
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    width: 4vw;
+    height: 3vw;
+    cursor: pointer;
+}
+
+
+.next:hover{
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+.portada{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.portada-back{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+/* Clases que se agregaran con Javascript */
+
+.trnsf{
+    /*transform: scale(1.4);*/
+    animation: leer 2s forwards;
+}
+
+@keyframes leer {
+    
+    0%{transform: rotateX(40deg);}
+    100%{transform: scale(1.4);}
+    
+}
+
+.trnsf-reset{
+    /*transform: rotateX(40deg);*/
+    animation: bajar 2s forwards;
+}
+
+
+@keyframes bajar {
+    0%{transform: scale(1.4);}
+    100%{transform: rotateX(40deg);}
+
+}
+
+.derecha{
+    transition: 1s;
+    transform: translateX(40%);
+    animation: desvanecer 1s forwards;
+}
+
+.arriba{
+    transition: 1s;
+    transform: translateY(-20%);
+    animation: desvanecer 1s forwards;
+}
+
+.izquierda{
+    transition: 1s;
+    transform: translateX(-100%);
+    animation: desvanecer 1s forwards;
+}
+
+.aparecer{
+    transition: 2s;
+    transform: rotateX(40deg);
+    opacity: 100%;
+    
+}

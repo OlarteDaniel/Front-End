@@ -1,0 +1,123 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.contenedor{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  width: 100%
+}
+
+.banner{
+  position: relative;
+  width: 100%;
+}
+
+.banner .luna{
+  position: relative;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+}
+
+.nube1{
+  top: 10%;
+  left: 50%;
+  display: flex;
+  position: absolute;
+  width: 45%;
+  animation: movimiento1 7s infinite linear;
+}
+
+@keyframes movimiento1 {
+  
+  0%{
+    margin-left: 0%;
+    opacity: 100%;
+  }
+  25%{
+    margin-left: 50%;
+    opacity: 0%;
+    visibility: hidden;
+  }
+  50%{
+    margin-left: -100%;
+    opacity: 0%;;
+  }
+  75%{
+    margin-left: -50%;
+    opacity: 50%;
+  }
+  100%{
+    margin-left: 0%;
+    opacity: 100%;
+  }
+
+}
+
+.nube2{
+  top: 50%;
+  left: 30%;
+  display: flex;
+  position: absolute;
+  width: 50%;
+  animation: movimiento2 6s infinite linear;
+}
+
+@keyframes movimiento2 {
+  0%{
+    margin-left: 0%;
+    opacity: 100%;
+  }
+  25%{
+    margin-left: 50%;
+    opacity: 50%;
+    visibility: hidden;
+  }
+  50%{
+    margin-left: -100%;
+    opacity: 0%;;
+  }
+  75%{
+    margin-left: -50%;
+    opacity: 50%;
+  }
+  100%{
+    margin-left: 0%;
+    opacity: 100%;
+  }
+}
+
+.nube3{
+  top: 30%;
+  left: 10%;
+  display: flex;
+  position: absolute;
+  width: 30%;
+  animation: movimiento2 8s infinite linear;
+}
+
+@keyframes movimiento2 {
+  0%{
+    margin-left: 0%;
+    opacity: 100%;
+  }
+  25%{
+    margin-left: 50%;
+    opacity: 0%;
+    visibility: hidden;
+  }
+  50%{
+    margin-left: -100%;
+    opacity: 0%;;
+  }
+  75%{
+    margin-left: -50%;
+    opacity: 50%;
+  }
+  100%{
+    margin-left: 0%;
+    opacity: 100%;
+  }
+}

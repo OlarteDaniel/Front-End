@@ -1,0 +1,75 @@
+<img src="../assets/imagenes/fon_form.png" alt="" class="fondo">
+<form [formGroup]="myForm" (ngSubmit)="submitFormulario()">
+    <div *ngIf="personaForm != null" class="contenedor">
+        <div class="perfil">
+            <h2>Editar Perfil</h2>
+            <div class="inputBox" id="nombre">
+                <span class="title">Nombre</span>
+                <input [(ngModel)]="personaForm.nombre" type="text" formControlName="nombre"  [class.is-invalid]="f.nombre.errors && f.nombre.touched" placeholder="Nombre">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Nombre Obligatorio!
+                </div>
+            </div>
+            <div class="inputBox" id="apellido">
+                <span class="title">Apellido</span>
+                <input [(ngModel)]="personaForm.apellido"  type="text" formControlName="apellido" [class.is-invalid]="f.apellido.errors && f.apellido.touched" placeholder="Apellido">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Apellido Obligatorio!
+                </div>
+            </div>
+            <div class="inputBox" id="correo">
+                <span class="title">Correo</span>
+                <input [(ngModel)]="personaForm.correo"  type="email" formControlName="correo" [class.is-invalid]="f.correo.errors && f.correo.touched" placeholder="Correo Electronico">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Correo Obligatorio!
+                </div>
+            </div>
+            <div class="inputBox" id="fnac"> 
+                <span class="title">Fecha de Nacimiento</span>
+                <input [(ngModel)]="personaForm.fnac" type="date" formControlName="fnac" [class.is-invalid]="f.fnac.errors && f.fnac.touched" placeholder="Fecha de nacimiento">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Fecha Obligatoria!
+                </div>
+            </div>  
+            <div class="inputBox" id="num">
+                <span class="title">Telefono</span>
+                <input [(ngModel)]="personaForm.numero"  type="text" formControlName="telefono" [class.is-invalid]="f.telefono.errors && f.telefono.touched" placeholder="Numero de celular">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Telefono Obligatorio!
+                </div>
+            </div>
+            <div class="inputBox" id="url">
+                <span class="title">Url imagen</span>
+                <input  [(ngModel)]="personaForm.url" type="text" formControlName="url" [class.is-invalid]="f.url.errors && f.url.touched" placeholder="Url de imagen">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Url Obligatoria!
+                </div>
+            </div>
+            <div class="inputBox" id="titulo">
+                <span class="title">Titulo</span>
+                <input [(ngModel)]="personaForm.titulo" type="text" formControlName="titulo" [class.is-invalid]="f.titulo.errors && f.titulo.touched" placeholder="Titulo">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Titulo Obligatorio!
+                </div>
+            </div>
+            <div class="inputBox" id="localidad">
+                <span class="title">Localidad</span>
+                <input [(ngModel)]="personaForm.localidad" type="text" formControlName="localidad" [class.is-invalid]="f.localidad.errors && f.localidad.touched" placeholder="Localidad">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Localidad Obligatoria!
+                </div>
+            </div>
+            <div class="textBox" id="sobreMi">
+                <span class="title">Descripcion</span>
+                <textarea [(ngModel)]="personaForm.sobreMi" formControlName="SobreMi" [class.is-invalid]="f.SobreMi.errors && f.SobreMi.touched" placeholder="Sobre Mi"></textarea>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Descripcion Obligatoria!
+                </div>
+            </div>
+            <div class="inputBox b" id="btn">
+                <input (click)="Actualizar(personamod)" type="submit" value="Enviar">
+            </div>
+            
+        </div>
+    </div>
+</form>

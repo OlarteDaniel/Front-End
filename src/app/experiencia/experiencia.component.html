@@ -1,0 +1,124 @@
+<div class="contenedor">
+    <img src="../assets/imagenes/Cartel_exp2.0.png" alt="" class="flotante">
+    <img src="../assets/imagenes/Experiencia2.0.png" alt="" class="Cartel">
+    <div class="conte">
+        <div class="luz"></div>
+        <div class="bloc1">
+            <img src="../assets/imagenes/arr.png" alt="" class="prev">
+        </div>
+        
+        <div class="slider">
+            <div class="img" *ngFor="let experiencia of experiencias">
+                <img src= {{experiencia.urlFondo}} alt="" >
+                
+                <div class="logotipo">
+                    <img src= {{experiencia.url}} alt="" class="logo">
+                </div>
+                <div class="puesto">
+                    {{experiencia.tipoTrabajo}}
+                </div>
+                <div class="periodo">
+                    Desde: {{experiencia.fechaInicio}}                   
+                    <br>
+                    Hasta: {{experiencia.fechaFin}}
+                </div>
+                <div class="titulo">
+                    <h1>{{experiencia.nombreEmpresa}}</h1>
+                </div>
+                <div class="descripcion">
+                    {{experiencia.descripcion}}
+                </div>
+                <div class="informacion">
+                    <a href={{experiencia.linkProyecto}}>Mas informacion</a>
+                </div>
+                <a *ngIf="visualizarMenu()" (click)="Editar(experiencia)" class="btn-perfil1">
+                    <img src="../assets/imagenes/pincel.png" alt="" class="pincel">
+                </a>
+                <a *ngIf="visualizarMenu()" (click)="Eliminar(experiencia)" class="btn-perfil2">
+                    <img src="../assets/imagenes/tacho.png" alt="" class="tacho">
+                </a>
+                <a *ngIf="visualizarMenu()" (click)="Agregar()" class="btn-perfil3">
+                    <img src="../assets/imagenes/Mas.png" alt="" class="Mas">
+                </a>
+            </div>
+        </div>
+        <div class="bloc2">
+            <img src="../assets/imagenes/Aba.png" alt="" class="next">
+        </div>
+</div>
+
+
+
+<!--<div class="img">
+                <img src= {{experiencias[0].urlFondo}} alt="" >
+                
+                <div class="logotipo">
+                    <img src= {{experiencias[0].url}} alt="" class="logo">
+                </div>
+                <div class="puesto">
+                    {{experiencias[0].tipoTrabajo}}
+                </div>
+                <div class="periodo">
+                    Desde: {{experiencias[0].fechaInicio}}                   
+                    <br>
+                    Hasta: {{experiencias[0].fechaFin}}
+                </div>
+                <div class="titulo">
+                    <h1>{{experiencias[0].nombreEmpresa}}</h1>
+                </div>
+                <div class="descripcion">
+                    {{experiencias[0].descripcion}}
+                </div>
+                <div class="informacion">
+                    <a href={{experiencias[0].linkProyecto}}>Mas informacion</a>
+                </div>
+            </div>
+            <div class="img">
+                <img src= {{experiencias[1].urlFondo}} alt="" >
+                
+                <div class="logotipo">
+                    <img src= {{experiencias[1].url}} alt="">
+                </div>
+                <div class="puesto">
+                    {{experiencias[1].tipoTrabajo}}
+                </div>
+                <div class="periodo">
+                    Desde: {{experiencias[1].fechaInicio}}                   
+                    <br>
+                    Hasta: {{experiencias[1].fechaFin}}
+                </div>
+                <div class="titulo">
+                    <h1>{{experiencias[1].nombreEmpresa}}</h1>
+                </div>
+                <div class="descripcion">
+                    {{experiencias[1].descripcion}}
+                </div>
+                <div class="informacion">
+                    <a href={{experiencias[1].linkProyecto}}>Mas informacion</a>
+                </div>
+            </div>
+            <div class="img">
+                <img src= {{experiencias[2].urlFondo}} alt="" >
+                
+                <div class="logotipo">
+                    <img src= {{experiencias[2].url}} alt="">
+                </div>
+                <div class="puesto">
+                    {{experiencias[2].tipoTrabajo}}
+                </div>
+                <div class="periodo">
+                    Desde: {{experiencias[2].fechaInicio}}                   
+                    <br>
+                    Hasta: {{experiencias[2].fechaFin}}
+                </div>
+                <div class="titulo">
+                    <h1>{{experiencias[2].nombreEmpresa}}</h1>
+                </div>
+                <div class="descripcion">
+                    {{experiencias[2].descripcion}}
+                </div>
+                <div class="informacion">
+                    <a href={{experiencias[2].linkProyecto}}>Mas informacion</a>
+                </div>
+            </div>
+        </div>-->

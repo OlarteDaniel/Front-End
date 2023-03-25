@@ -1,0 +1,134 @@
+<div class="contenedor">
+    <div class="fondo">
+        <img src="../assets/imagenes/Mesa2.0.png" alt="" class="mesa">
+        <img src="../assets/imagenes/Carpeta2.0.png" alt="" class="carpeta">
+        <img src="../assets/imagenes/Lupa2.0.png" alt="" class="lupa">
+        <img src="../assets/imagenes/PortaEducacion2.0.png" alt="" class="porta">
+    </div> 
+        <div class="book-content">
+            <div class="book">
+                <div class="face-front" id="portada" >
+                    <img src="../assets/imagenes/bookPortada2.0.png" alt="" class="portada">
+                </div>
+                <div class="face-back">
+                    
+                    <div class="logo">
+                        <img src = {{educaciones[0].url}} alt="" class="logo">
+                    </div>
+                    <div class="marco"></div>
+                    <div class="nombre">
+                        {{educaciones[0].nombreInstitucion}}
+                    </div>
+                    <div class="titulo">
+                        {{educaciones[0].titulo}}
+                    </div>
+                    <div class="periodo">
+                        Desde: {{educaciones[0].fechaInicio}}
+                        <br>
+                        Hasta: {{educaciones[0].fechaFin}}
+                    </div>
+                    <div class="descripcion">
+                        {{educaciones[0].descripcion}}
+                    </div>
+                    <a *ngIf="visualizarMenu()" (click)="Editar(educaciones[0])" class="btn-perfil">
+                        <img src="../assets/imagenes/pincel.png" alt="" class="pincel">
+                    </a>
+                    <div class="back">
+                        <img src="../assets/imagenes/Flecha_back.png" alt="" class="back" id="trsf">
+                    </div>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                    
+                    <div class="logo">
+                        <img src ="{{educaciones[1].url}}" alt="" class="logo">
+                    </div>
+                    <div class="marco"></div>
+                    <div class="nombre">
+                        {{educaciones[1].nombreInstitucion}}
+                    </div>
+                    <div class="titulo">
+                        {{educaciones[1].titulo}}
+                    </div>
+                    <div class="periodo">
+                        Desde: {{educaciones[1].fechaInicio}}
+                        <br>
+                        Hasta: {{educaciones[1].fechaFin}}
+                    </div>
+                    <div class="descripcion">
+                        {{educaciones[1].descripcion}}
+                    </div>
+                    <a *ngIf="visualizarMenu()" (click)="Editar(educaciones[1])" class="btn-perfil">
+                        <img src="../assets/imagenes/pincel.png" alt="" class="pincel">
+                    </a>
+                    <div class="next">
+                        <img src="../assets/imagenes/Flecha_next.png" alt=""  class="next">
+                    </div>
+                </div>
+                <div class="face-back">
+                    
+                    <div class="logo">
+                        <img src ="{{educaciones[2].url}}" alt="" class="logo">
+                    </div>
+                    <div class="marco"></div>
+                    <div class="nombre">
+                        {{educaciones[2].nombreInstitucion}}
+                    </div>
+                    <div class="titulo">
+                        {{educaciones[2].titulo}}
+                    </div>
+                    <div class="periodo">
+                        Desde: {{educaciones[2].fechaInicio}}
+                        <br>
+                        Hasta: {{educaciones[2].fechaFin}}
+                    </div>
+                    <div class="descripcion">
+                        {{educaciones[2].descripcion}}
+                    </div>
+                    <a *ngIf="visualizarMenu()" (click)="Editar(educaciones[2])" class="btn-perfil">
+                        <img src="../assets/imagenes/pincel.png" alt="" class="pincel">
+                    </a>
+                    <div class="back">
+                        <img src="../assets/imagenes/Flecha_back.png" alt=""  class="back">
+                    </div>
+                </div>
+            </div>
+
+            
+            
+            <div class="book">
+                <div class="face-front">
+                   
+                    <div class="logo">
+                        <img src= "{{educaciones[3].url}}" alt="" class="logo">
+                    </div>
+                    <div class="marco"></div>
+                    <div class="nombre">
+                        {{educaciones[3].nombreInstitucion}}
+                    </div>
+                    <div class="titulo">
+                        {{educaciones[3].titulo}}
+                    </div>
+                    <div class="periodo">
+                        Desde: {{educaciones[3].fechaInicio}}
+                        <br>
+                        Hasta: {{educaciones[3].fechaFin}}
+                    </div>
+                    <div class="descripcion">
+                        {{educaciones[3].descripcion}}
+                    </div>
+                    <a *ngIf="visualizarMenu()" (click)="Editar(educaciones[3])" class="btn-perfil">
+                        <img src="../assets/imagenes/pincel.png" alt="" class="pincel">
+                    </a>
+                    <div class="next">
+                        <img src="../assets/imagenes/Flecha_next.png" alt="" class="next">
+                    </div>
+                </div>
+                <div class="face-back">
+                    <img src="../assets/imagenes/portadaBack2.0.png" alt="" class="portada-back">
+                </div>
+            </div>
+        </div>
+</div>
